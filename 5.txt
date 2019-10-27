@@ -1,0 +1,61 @@
+print('Введите X,Y первой вершины треугольника')
+x1=tonumber(io.read())
+y1=tonumber(io.read())
+print('Введите X,Y второй вершины треугольника')
+x2=tonumber(io.read())
+y2=tonumber(io.read())
+print('Введите X,Y третьей вершины треугольника')
+x3=tonumber(io.read())
+y3=tonumber(io.read())
+
+a=math.sqrt((x2+x1)*(x2+x1)+(y2+y1)*(y2+y1))
+b=math.sqrt((x3+x1)*(x3+x1)+(y3+y1)*(y3+y1))
+c=math.sqrt((x2+x3)*(x2+x3)+(y2+y3)*(y2+y3))
+io.write('a = ',a,'\n')
+io.write('b = ',b,'\n')
+io.write('c = ',c,'\n')
+p=a+b+c
+io.write('P = ',p,'\n')
+s=math.abs((x2-x1)*(y3-y1)-(x3-x1)*(y2-y1))/2
+io.write('S = ',s,'\n')
+rv=2*s/(a+b+c)
+io.write('r = ',rv,'\n')
+ro=(a*b*c)/4*s
+io.write('R = ',ro,'\n\n')
+
+io.write('Медиана к стороне\n')
+ma=math.sqrt((2*c*c+2*b*b-a*a)/4)
+mb=math.sqrt((2*a*a+2*c*c-b*b)/4)
+mc=math.sqrt((2*a*a+2*b*b-c*c)/4)
+io.write('MA = ', ma,'\n','MB = ', mc,'\n','MC = ', mb,'\n')
+
+io.write('Высота к стороне\n')
+ha=(2*s)/a
+hb=(2*s)/b
+hc=(2*s)/c
+io.write('HA = ', ha,'\n','HB = ', hc,'\n','HC = ', hb,'\n')
+
+io.write('Биссектриса к стороне\n')
+ba=(2/(b+c))*math.sqrt(b*c*p/2*(p/2-a))
+bb=(2/(a+c))*math.sqrt(a*c*p/2*(p/2-b))
+bc=(2/(b+a))*math.sqrt(b*a*p/2*(p/2-c))
+c=math.floor(c*10)/10
+io.write('BA = ', ba,'\n','BB = ', bc,'\n','BC = ', c,'\n')
+
+
+sina=math.deg(math.asin((2*s)/(b*c)))
+sinb=math.deg(math.asin((2*s)/(a*c)))
+sinc=math.deg(math.asin((2*s)/a*b))
+io.write('sinA = ', sina,'\n','sinB = ', sinb,'\n','sinC = ', sinc,'\n')
+
+
+
+
+
+
+0
+0
+0
+1
+1
+0

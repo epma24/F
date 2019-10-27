@@ -1,0 +1,56 @@
+--3
+x1=tonumber(io.read())
+y1=tonumber(io.read())
+a=tonumber(io.read())
+x0=tonumber(io.read())
+y0=tonumber(io.read())
+io.write('Введите левую нижнюю координату начала квадрата: ',x1,' ',y1,'\n')
+io.write('Введите длину стороны: ',a,'\n')
+io.write('Введите координату точки: ',x0,' ',y0,'\n')
+if ((x0>=x1 and y0>=y1 and x0<=x1+a and y0<=y1+a)) then io.write('ВХОДИТ\n\n') else io.write('не ВХОДИТ\n\n') end;
+
+--4
+x0=tonumber(io.read())
+y0=tonumber(io.read())
+rb=tonumber(io.read())
+rm=tonumber(io.read())
+x1=tonumber(io.read())
+y1=tonumber(io.read())
+io.write('Введите координаты центра оружностей: ',x0,' ',y0,'\n')
+io.write('Введите радиус внешней окружности: ',rb,'\n')
+io.write('Введите радиус внутренней окружности: ',rm,'\n')
+io.write('Введите координату точки: ',x1,' ',y1,'\n')
+s=math.sqrt((x1-x0)*(x1-x0)+(y1-y0)*(y1-y0))
+if (s<rb) then 
+    if (s<rm) then io.write('ВХОДИТ в "дырку" бублика\n\n') else io.write('ВХОДИТ в сам бублик\n\n') end
+else io.write('ВЫХОДИТ за пределы бублика\n\n') end
+
+--5
+x0=tonumber(io.read())
+y0=tonumber(io.read())
+io.write('Введите координаты точки: ',x0,' ',y0,'\n')
+if (x0==0)or(y0==0) then io.write('Лежит хотя бы на одной оси') else 
+    if (x0>0) then 
+	if (y0>0) then io.write('I четверть') else io.write('IV четверть') end end
+    if (x0<0) then 
+    	if (y0>0) then io.write('II четверть') else io.write('III четверть') end end end
+
+
+
+
+
+
+
+5
+5
+5
+6
+5
+5
+5
+6
+3
+5
+4
+5
+5

@@ -1,0 +1,85 @@
+#include <iostream>
+#include <stdlib.h>
+#include <float.h>
+
+#include <limits.h>
+
+using namespace std;
+int main()
+{
+    cout<<"Тип\tБайты\tМинимум\t\tМаксимум\t"<<endl;
+    cout<<"int\t"<<sizeof(int)<<"\t"<<INT_MIN<<"\t"<<INT_MAX<<endl;
+    cout<<"u int\t"<<sizeof(unsigned int)<<"\t"<<0<<"\t"<<UINT_MAX<<endl;
+    cout<<"long\t"<<sizeof(long)<<"\t"<<LONG_MIN<<"\t"<<LONG_MAX<<endl;
+    cout<<"u long\t"<<sizeof(unsigned long)<<"\t"<<0<<"\t"<<ULONG_MAX<<endl; 
+    cout<<"float\t"<<sizeof(float)<<"\t"<<FLT_MIN<<"\t"<<FLT_MAX<<endl;
+    cout<<"double\t"<<sizeof(double)<<"\t"<<DBL_MIN<<"\t"<<DBL_MAX<<endl;
+    cout<<"ldouble\t"<<sizeof(long double)<<"\t"<<LDBL_MIN<<"\t"<<LDBL_MAX<<endl;
+    cout<<"char\t"<<sizeof(char)<<"\t"<<CHAR_MIN<<"\t"<<CHAR_MAX<<endl;
+    cout<<"u char\t"<<sizeof(unsigned char)<<"\t"<<0<<"\t"<<UCHAR_MAX<<endl;
+    cout<<"bool\t"<<sizeof(bool)<<"\t"<<"false"<<"\t"<<"true"<<endl;
+    
+    cout<<"ПЕРЕПОЛНЕНИЕ"<<endl;
+    
+    int a1;
+    int s1;
+    a1=2147483647;
+    s1  = a1 + 1;
+    cout<<"int: "<<long long(s1)<<endl;
+    
+    unsigned int a2;
+    unsigned int s2;
+    a2=4294967295;
+    s2  = a2 + 1;
+    cout<<"u int: "<<long long(s2)<<endl;
+    
+    long a3;
+    long s3;
+    a3=2147483647;
+    s3  = a3 + 1;
+    cout<<"long: "<<long long(s3)<<endl;
+    
+    unsigned long a4;
+    unsigned long s4;
+    a4=4294967295;
+    s4  = a4 + 1;
+    cout<<"u long: "<<long long(s4)<<endl;
+    
+    float a5;
+    float s5;
+    a5=3.40282e+38;
+    s5  = a5 + 1;
+    cout<<"float: "<<long long(s5)<<endl;
+    
+    double a6;
+    double s6;
+    a6=1.79769e+308;
+    s6  = a6 + 1;
+    cout<<"u double: "<<long long(s6)<<endl;
+    
+    long double a7;
+    long double s7;
+    a7=1.79769e+308;
+    s7  = a7 + 1;
+    cout<<"l double: "<<long long(s7)<<endl;
+    
+    char a8;
+    char s8;
+    a8=127;
+    s8  = a8 + 1;
+    cout<<"char: "<<long long(s8)<<endl;
+    
+    unsigned char a9;
+    unsigned char s9;
+    a9=255;
+    s9  = a9 + 1;
+    cout<<"char: "<<long long(s9)<<endl;
+    
+    bool a10;
+    bool s10;
+    a10=true;
+    s10  = a10 + 1;
+    cout<<"bool: "<<long long(s10)<<endl;
+    
+    return (0);
+}

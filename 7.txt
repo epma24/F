@@ -1,0 +1,62 @@
+io.write('Тест по CS:GO\n')
+n=0
+io.write('1. Какое оружие называется игроками мухой?\n')
+io.write('  1) AWP\n')
+io.write('  2) MAC-10\n')
+io.write('  3) Steyr Scout\n')
+io.write('  4) AUG\n')
+i1=io.read()
+io.write(i1)
+if (i1=='3') then n=n+1 io.write(' - Молодец\n\n') else io.write(' - Плохо\n\n') end
+
+io.write('2. Сколько стоит AWP?\n')
+io.write('  1) 3200$\n')
+io.write('  2) 5000$\n')
+io.write('  3) 4700$\n')
+io.write('  4) 4750$\n')
+i2=io.read()
+io.write(i2)
+if (i2=='4') then n=n+1 io.write(' - Молодец\n\n') else io.write(' - Плохо\n\n') end
+
+io.write('3. Какое оружие называется игроками плеткой?\n')
+io.write('  1) G3SG1\n')
+io.write('  2) AWP\n')
+io.write('  3) FAMAS\n')
+io.write('  4) Scar-20\n')
+i3=io.read()
+io.write(i3)
+if (i3=='1')or(i3=='4') then n=n+1 io.write(' - Молодец\n\n') else io.write(' - Плохо\n\n') end
+
+io.write('4. Как называется команда для активации читов на сервере?\n')
+io.write('  1) sv_cheats 1\n')
+io.write('  2) sv_givemeall\n')
+io.write('  3) bangbangbang\n')
+io.write('  4) omgwtfboom\n')
+i4=io.read()
+io.write(i4)
+if (i4=='1') then n=n+1 io.write(' - Молодец\n\n') else io.write(' - Плохо\n\n') end
+
+io.write('5.  Как называется раунд, когда игроки команды не тратят деньги, чтобы полностью закупиться в следующем раунде?\n')
+io.write('  1) Pistol round\n')
+io.write('  2) Eco')
+io.write('  3) Fake\n')
+io.write('  4) Rush\n')
+i5=io.read()
+io.write(i5)
+if (i5=='2') then n=n+1 io.write(' - Молодец\n\n') else io.write(' - Плохо\n\n') end
+
+io.write('Оценка: ',n,'\n')
+if (n==5) then io.write('Отлично!') else 
+    if (n==4) then io.write('Хорошо') else
+        if (n==3) then io.write('Удовлетворительно') else
+            io.write('Неудовлитворительно') end end end
+
+
+
+
+
+3
+4
+3
+2
+2

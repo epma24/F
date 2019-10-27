@@ -1,0 +1,42 @@
+#include <iostream>
+#include <stdlib.h>
+#include <float.h>
+#define _USE_MATH_DEFINES
+#include <math.h>
+
+#include <limits.h>
+
+using namespace std;
+int main()
+{
+    setlocale(0, "RUSSIAN");
+    system("cls");
+    float a, d1, d2, r1, r2, d3, h1, h2, h3, d4;
+    cout<<"Введите сторону куба"<<endl;
+    cin>>a;
+    d1=a*a*a;
+    d2=a*a*6;
+    cout<<"Объем куба = "<<d1<<endl;
+    cout<<"Площадь боковой поверхности куба = "<<d2<<endl;
+    
+    cout<<""<<endl;
+    
+    cout<<"Введите радиус внешнего"<<endl;
+    cin>>r1;
+    cout<<"Введите радиус внутреннего"<<endl;
+    cin>>r2;
+    d3=M_PI*(r1*r1-r2*r2);
+    cout<<"Площадь кольца = "<<d3<<endl;
+    
+    
+    cout<<""<<endl;
+    
+    cout<<"Введите основания трапеции"<<endl;
+    cin>>h1>>h2;
+    cout<<"Введите высоту трапеции"<<endl;
+    cin>>h3;
+    d4=((h1+h2)/2)*h3;
+    cout<<"Площадь кольца = "<<d4<<endl;
+     
+    return (0);
+}

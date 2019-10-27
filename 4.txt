@@ -1,0 +1,26 @@
+print('Введите рост родителей будущего ребенка')
+a=tonumber(io.read())
+b=tonumber(io.read())
+c=(a+b)/2-6.4
+d=(a+b)/2+6.4
+io.write('Девочка: ',c,'\n')
+io.write('Мальчик: ',d, '\n', '\n')
+
+print('Введите возраст мужчины')
+a1=tonumber(io.read())
+c1=a1/2+7
+io.write('Идеальный возраст женщины: ',c1,'\n')
+print('Введите возраст мужчины')
+a2=tonumber(io.read())
+c2=a2*2-17
+io.write('Идеальный возраст мужчины: ',c2, '\n', '\n')
+
+print('Введите количество секунд')
+a3=tonumber(io.read())
+h=0; m=0; s=0;
+if (a3>=3600) then h=a3//3600 a3=a3-3600*h end
+if (a3>0) then
+    if (a3>60) then m=a3//60 a3=a3-60*m end
+end
+if (a3>0) then s=a3 end
+io.write('Это ',h,' часов ',m,' минут ',s,' секунд')

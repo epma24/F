@@ -1,0 +1,29 @@
+print('Программа сложения')
+print('Введите 2 числа')
+a=tonumber(io.read())
+b=tonumber(io.read())
+c=a+b
+io.write(a,'+',b,'=',c)
+
+print('Cложение, вычитание, множение, деление')
+print('Введите 2 числа')
+a=tonumber(io.read())
+b=tonumber(io.read())
+c=a+b
+d=a-b
+e=a*b
+f=a/b
+io.write(a,'+',b,'=',c,'\n')
+io.write(a,'-',b,'=',d, '\n')
+io.write(a,'*',b,'=',e, '\n')
+io.write(a,'/',b,'=',f, '\n')
+
+
+print('Программа вычисления синуса и косинуса')
+print('Введите угол в градусах')
+a=tonumber(io.read())
+ar=math.rad(a)
+sin=math.sin(ar)
+cos=math.cos(ar)
+io.write('sin(',ar,')=',sin, '\n')
+io.write('cos(',ar,')=',cos, '\n')
