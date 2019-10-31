@@ -12,5 +12,31 @@ if (a==d) then io.write('a=d','\n\n') else
             c1=d-a
             c2=d-b
             c3=d-c
-            if (c1>c2) then io.write('d-a=',c1,'\n\n') else
-                if (c1>c2) then io.write('d-a=',c1,'\n\n')
+            if (c1>c2)and(c1>c3) then io.write('d-a=',c1,'\n\n') else
+                if (c2>c1)and(c2>c3) then io.write('d-b=',c2,'\n\n') else
+                    if (c3>c1)and(c3>c2) then io.write('d-c=',c3,'\n\n') end end end end end end
+
+--04
+cost=tonumber(io.read())
+io.write('Введите стоимость книг: ',cost,'\n');
+user=tonumber(io.read())
+if (cost==user) then io.write('Спасибо!\n\n') else
+    if (cost>user) then 
+        a=cost-user
+        io.write('Внесенной суммы недостаточно, не хватает ',a,'\n\n') else
+            if (cost<user) then
+                a=user-cost
+                io.write('Возьмите сдачу ',a,'\n\n') end end end
+
+--05
+min=tonumber(io.read())
+io.write('Введите количество минут: ',min,'\n');
+if (min<=50) then io.write('Сумма за разговор ',min,'р') else
+    if (min<=80) then
+        a=50+(min-50)*0.80
+        io.write('Сумма за разговор ',a,'р') else
+            if (min<=100) then
+                a=50+24+(min-50-24)*0.50
+                io.write('Сумма за разговор ',a,'р') else
+                    a=59+24+10+(min-50-24-10)*0.30
+                    io.write('Сумма за разговор ',a,'р') end end end
