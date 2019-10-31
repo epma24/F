@@ -1,0 +1,21 @@
+--3
+n=tonumber(io.read())
+io.write('Введите номер месяца: ',n,'\n')
+io.write('Время года: ')
+if (n>2)and(n<6) then io.write('Весна\n\n') else
+    if (n>5)and(n<9) then io.write('Лето\n\n') else
+            if (n>8)and(n<12) then io.write('Осень\n\n') else 
+                io.write('Зима\n\n') end end end
+
+--4
+n=tonumber(io.read())
+io.write('Введите количество лет: ',n,'\n')
+io.write('Мне ',n,' ')
+a=n%10
+if (a==1) then 
+    if (n==11) then io.write('лет') else io.write('год') end end
+
+if (a==2)or(n%10==3)or(n%10==4) then 
+    if (n==12)or(n==13)or(n==14) then io.write('лет') else  io.write('года') end end
+
+if (a==0)or((a>4)and(a<10)) then io.write('лет') end 
