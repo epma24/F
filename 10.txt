@@ -1,0 +1,16 @@
+--03
+a=tonumber(io.read())
+b=tonumber(io.read())
+c=tonumber(io.read())
+d=tonumber(io.read())
+
+io.write('Введите 3 числа: a, b и c: ',a,' ',b,' ',c,'\n')
+io.write('Введите число d: ',d,'\n');
+if (a==d) then io.write('a=d','\n\n') else
+    if (b==d) then io.write('b=d','\n\n') else
+        if (c==d) then io.write('c=d','\n\n') else
+            c1=d-a
+            c2=d-b
+            c3=d-c
+            if (c1>c2) then io.write('d-a=',c1,'\n\n') else
+                if (c1>c2) then io.write('d-a=',c1,'\n\n')
