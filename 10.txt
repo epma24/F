@@ -31,15 +31,19 @@ if (cost==user) then io.write('Спасибо!\n\n') else
 --05
 min=tonumber(io.read())
 io.write('Введите количество минут: ',min,'\n');
-if (min<=50) then io.write('Сумма за разговор ',min,'р') else
+if (min<=50) then a=min else
     if (min<=80) then
         a=50+(min-50)*0.80
-        io.write('Сумма за разговор ',a,'р') else
-            if (min<=100) then
+        else if (min<=100) then
                 a=50+24+(min-50-30)*0.50
-                io.write('Сумма за разговор ',a,'р') else
-                    a=59+24+10+(min-50-30-20)*0.30
-                    io.write('Сумма за разговор ',a,'р') end end end
+                else a=59+24+10+(min-50-30-20)*0.30 end end end
+k=(a*10)%10
+if (k~=0) then
+    a=((a*10)-k)/10
+    k=k%10
+    else k=0
+end   
+io.write('Сумма за разговор ',a,'р ',k,'к')
 
 
 
@@ -51,4 +55,4 @@ if (min<=50) then io.write('Сумма за разговор ',min,'р') else
 4
 2000
 5000
-82
+81
