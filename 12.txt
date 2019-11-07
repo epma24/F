@@ -1,0 +1,55 @@
+--3
+n=tonumber(io.read())
+
+io.write('Введите число: ',n,'\n')
+
+a=1
+for i=1,n do
+    a=a*i
+end
+io.write(n,'! = ',a,'\n\n')
+
+--4,5
+array={}
+sum=0
+mini=0
+maxi=0
+length=tonumber(io.read())
+
+io.write('Введите число элементов: ',length,'\n','Элементы:\n')
+
+if (length>0) then
+    array[0]=tonumber(io.read())
+    max=array[0]
+    min=array[0]
+    sum=sum+array[0]
+    else io.write('ERROR length<=0') end
+for i=1, length-1 do
+    array[i]=tonumber(io.read())
+    if (max<array[i]) then 
+        max=array[i]
+        maxi=i+1
+    end
+    if (min>array[i]) then
+        min=array[i]
+        mini=i+1
+    end
+    sum=sum+array[i]
+end
+
+for i=0, length-1 do
+   io.write(array[i],'\n')
+end
+
+io.write('Max = ',max,', находится на позиции: ',maxi,'\n')
+io.write('Min = ',min,', находится на позиции: ',mini,'\n')
+io.write('Sum = ',sum,'\n\n')
+
+
+
+
+5
+3
+2
+1
+3
